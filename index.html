@@ -89,6 +89,35 @@
         </nav>
     </header>
 
+              <section id="home" class="page-section active">
+                <div class="flex flex-col lg:flex-row items-center gap-8 md:gap-16 lg:py-12">
+                    <div class="w-full lg:w-3/5 space-y-8 text-center lg:text-left">
+                        <h1 class="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-black max-w-4xl">
+                            LankkuPojat • Leikkuulautoja nuorilta yrittäjiltä
+                        </h1>
+                        <p class="text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            Valmistamme kestävät ja kauniit leikkuulaudat suomalaisesta puusta. Jokainen tuote on uniikki ja rakkaudella käsitelty kestämään sukupolvelta toiselle.
+                        </p>
+                        <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-2">
+                            <button onclick="showPage('services')" class="w-full sm:w-auto bg-black text-white px-8 py-4 rounded-full font-bold hover:bg-slate-800 transition shadow-lg active:scale-[0.98]">
+                                Kiinnostuitko? Tutustu tuotteisiimme
+                            </button>
+                            <button onclick="showPage('contact')" class="w-full sm:w-auto border-2 border-black text-black px-8 py-4 rounded-full font-bold hover:bg-black hover:text-white transition">
+                                Ota yhteyttä
+                            </button>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-2/5">
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-square w-full border-8 border-white">
+                             <img src="https://images.unsplash.com/photo-1594752404000-844c8c082717?auto=format&fit=crop&w=1000&q=80" 
+                                  alt="[Kuva puisesta leikkuulaudasta]" 
+                                  class="object-cover w-full h-full"
+                                  onerror="this.src='https://via.placeholder.com/800x800?text=Leikkuulauta'">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
     <script src="script.js"></script>
 </body>
 </html>
