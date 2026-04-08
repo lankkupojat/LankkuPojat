@@ -12,3 +12,7 @@ body {
     max-height: 400px;
     padding: 1rem 0;
 }
+
+.hero-title {
+    font-family: 'Open Sans', sans-serif;
+}
