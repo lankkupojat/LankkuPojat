@@ -1,23 +1,30 @@
-const menuBtn = document.getElementById('menu-btn');
-const mobileMenu = document.getElementById('mobile-menu');
-const menuIcon = document.getElementById('menu-icon');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-menuBtn.addEventListener('click', () => {
-  const isActive = mobileMenu.classList.toggle('active');
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('open');
+        }
 
-  if (isActive) {
-    menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
-    menuIcon.classList.add('open');
-  } else {
-    menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
-    menuIcon.classList.remove('open');
-  }
-});
+        function showPage(pageId) {
+            mobileMenu.classList.remove('open');
+            document.querySelectorAll('.page-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
 
-window.addEventListener('resize', () => {
-  if (window.innerWidth >= 768) {
-    mobileMenu.classList.remove('active');
-    menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
-    menuIcon.classList.remove('open');
-  }
-});
+        function handleContact(event) {
+            event.preventDefault();
+            const form = document.getElementById('contactForm');
+            const success = document.getElementById('successMessage');
+            const btn = form.querySelector('button');
+            btn.innerHTML = 'Lähetetään...';
+            btn.disabled = true;
+            setTimeout(() => {
+                form.style.display = 'none';
+                success.classList.remove('hidden');
+            }, 1200);
+        }
