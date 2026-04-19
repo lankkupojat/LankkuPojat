@@ -1,196 +1,116 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-  <meta charset="UTF-8">
-  <title>LankkuPojat • Leikkuulautoja nuorilta yrittäjiltä</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background: #fff;
-      color: #000;
-      line-height: 1.6;
-    }
-
-    section {
-      padding: 80px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    h1, h2 {
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-weight: 300;
-      max-width: 600px;
-    }
-
-    header {
-      width: 100%;
-      border-bottom: 1px solid #000;
-      padding: 20px;
-      position: sticky;
-      top: 0;
-      background: #fff;
-    }
-
-    .nav {
-      max-width: 1000px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav a {
-      text-decoration: none;
-      color: #000;
-      margin-left: 20px;
-    }
-
-    .nav a:hover {
-      text-decoration: underline;
-    }
-
-    .hero {
-      height: 50vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      border-bottom: 1px solid #000;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-    }
-
-    .story {
-      border-bottom: 1px solid #000;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-
-    .contact-card {
-      border: 1px solid #000;
-      padding: 20px;
-      border-radius: 10px;
-    }
-
-    .contact-card h3 {
-      margin-bottom: 10px;
-      font-size: 1.1rem;
-    }
-
-    footer {
-      border-top: 1px solid #000;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    footer .brand {
-      font-weight: 700;
-      margin-bottom: 10px;
-      font-style: italic;
-    }
-
-    footer p {
-      font-size: 0.9rem;
-      color: #444;
-      margin: auto;
-    }
-
-    @media (max-width: 600px) {
-      .hero {
-        height: 40vh;
-      }
-
-      .hero h1 {
-        font-size: 2rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lankkupojat - Laatua läheltä</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+<body class="bg-gray-50">
 
-<body>
+    <header class="bg-gray-900 text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
 
-  <header>
-    <div class="nav">
-      <div><strong>LankkuPojat</strong></div>
-      <div>
-        <a href="#story">Tarina</a>
-        <a href="#contact">Yhteystiedot</a>
-      </div>
-    </div>
-  </header>
-
-  <section class="hero">
-    <h1>LankkuPojat • Leikkuulautoja nuorilta yrittäjiltä</h1>
-    <p>Me LankkuPojat valmistamme käsityönä uniikkeja koivuleikkuulautoja Ylöjärvellä.</p>
-  </section>
-
-  <section id="story" class="story">
-    <h2>Tarinamme</h2>
-    <p>
-LankkuPojat syntyi halustamme tehdä yhdessä jotain merkityksellistä ja hyödyllistä. Valmistamme käsityönä Pirkanmaalla koivuleikkuulautoja, joihin saa halutessaan oman yrityksen logon laserkaiverrettuna.
-    </p>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Yhteystiedot</h2>
-
-    <div class="contact-grid">
-
-      <div class="contact-card">
-        <h3>🏠 Osoite</h3>
-        <p>
-          <strong>LankkuPojat</strong><br>
-          33470 Ylöjärvi<br>
-          Suomi
-        </p>
-      </div>
-
-<div class="contact-card">
-  <h3>📞 Yhteys</h3>
-  <p>
-    Puhelin: +358 40 682 1800<br>
-    Sähköposti: leikkuulaudat@lankkupojat.shop
-  </p>
+               <div class="flex-shrink-0 flex items-center">
+    <a href="/" class="flex items-center transition-transform duration-200 hover:scale-105">
+        <span class="text-2xl font-bold tracking-tight font-open-sans text-white">
+            LankkuPojat
+        </span>
+    </a>
 </div>
 
-      <div class="contact-card">
-        <h3>⭐ Miksi me?</h3>
-        <p>
-          Teemme tuotteita Suomessa<br>
-          Valmistamme tuotteet käsin<br>
-        </p>
-      </div>
+                <nav class="hidden md:flex space-x-10">
+                    <a href="#" class="hover:text-orange-400 transition-colors font-medium">Menu</a>
+                    <a href="#" class="hover:text-orange-400 transition-colors font-medium">Meistä</a>
+                    <a href="#" class="hover:text-orange-400 transition-colors font-medium">Yhteys</a>
+                </nav>
 
+                <div class="flex items-center">
+                    <div class="flex items-center space-x-3 bg-gray-800 px-4 py-2 rounded-full border border-gray-700">
+                        <a href="tel:-" class="hover:text-orange-400 transition-colors">
+                            <i data-lucide="phone" class="w-5 h-5"></i>
+                        </a>
+                        <span class="text-gray-500 font-light">/</span>
+                        <a href="mailto:leikkuulaudat@lankkupojat.shop" class="hover:text-orange-400 transition-colors">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-gray-100 py-16 lg:py-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+
+                <div class="flex-1 text-center lg:text-left"> 
+  <h1 class="text-4xl font-bold text-black font-open-sans whitespace-nowrap"> 
+    • Lankkupojat - Laatua läheltä • 
+  </h1> 
+</div>
+
+                <div class="flex-initial w-full max-w-sm lg:max-w-md">
+                    <div class="relative">
+                        <div class="absolute -top-5 -right-5 w-32 h-32 bg-gray-300 rounded-full mix-blend-multiply filter blur-2xl opacity-30"></div>
+                        <img 
+                            src="hero.webp" 
+                            alt="[Kuva koivusta]" 
+                            class="rounded-xl shadow-lg w-full object-cover transform hover:scale-[1.01] transition-transform duration-500"
+                        >
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+  
+      <div id="tarinamme-osio" class="max-w-7xl mx-auto px-8 py-12 md:py-28">
+      
+        <div class="grid grid-cols-1 md:grid-cols-[240px_1fr_240px] gap-16 items-center">
+
+            <div class="hidden md:flex flex-col image-strip">
+                <img src="https://images.unsplash.com/photo-1600496181114-160ff2f2a612?w=500&auto=format&fit=crop&q=60" alt="[Kuva koivun rungosta]">
+            </div>
+
+            <div class="flex flex-col items-center text-center space-y-10 px-4">
+                <header class="space-y-6">
+                    <h1 class="text-4xl md:text-6xl font-bold leading-tight">Meidän Tarinamme</h1>
+                    <div class="w-12 h-[2px] bg-black mx-auto"></div>
+                </header>
+
+                <article class="max-w-prose space-y-8 text-base md:text-lg leading-relaxed text-gray-600">
+                    <p>
+                        Kaikki alkoi...
+                    </p>
+                    <p>
+                        Matkamme varrella olemme.
+                    </p>
+                    <p>
+                        Kiitos.
+                    </p>
+                </article>
+            </div>
+
+            <div class="hidden md:flex flex-col image-strip">
+                <img src="https://images.unsplash.com/photo-1420585250056-371a656025ed?w=500&auto=format&fit=crop&q=60" alt="[Leikkuulauta]">
+            </div>
+
+            <div class="md:hidden grid grid-cols-2 gap-4 mt-12">
+                <img src="https://images.unsplash.com/photo-1600496181114-160ff2f2a612?w=500&auto=format&fit=crop&q=60" class="w-full aspect-square object-cover rounded-xl shadow-sm border border-gray-100" alt="[Kuva koivun rungosta]">
+                <img src="https://images.unsplash.com/photo-1420585250056-371a656025ed?w=500&auto=format&fit=crop&q=60" class="w-full aspect-square object-cover rounded-xl shadow-sm border border-gray-100" alt="[Kuva koivumetsästä]">
+            </div>
+
+        </div>
     </div>
-  </section>
 
-  <footer>
+    <footer>
     <div class="brand">LankkuPojat</div>
     <p>&copy; 2026 LankkuPojat. Kaikki oikeudet pidätetään.</p>
   </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
